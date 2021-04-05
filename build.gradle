@@ -32,6 +32,7 @@ dependencies {
     implementation("org.apache.logging.log4j:log4j-core:2.12.1")
     runtimeOnly("org.apache.logging.log4j:log4j-api:2.12.1")
     runtimeOnly("org.apache.logging.log4j:log4j-slf4j-impl:2.12.1")
+    compile "com.opencsv:opencsv:4.0"//отсутствующая зависимость
 }
 
 
@@ -40,8 +41,8 @@ application {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion("11")
-    targetCompatibility = JavaVersion.toVersion("11")
+    sourceCompatibility = JavaVersion.toVersion("14")
+    targetCompatibility = JavaVersion.toVersion("14")
 }
 
 compileJava {
