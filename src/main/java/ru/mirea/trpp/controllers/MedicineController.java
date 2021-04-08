@@ -19,11 +19,14 @@ public class MedicineController {
 
     /** Конструктор. */
     public MedicineController() {
-        medicineList = new CsvToBeanBuilder<Medicine>(new InputStreamReader(this.getClass().getResourceAsStream("/MOCK_DATA.csv"))).withType(Medicine.class).build().parse();
+        medicineList = new CsvToBeanBuilder<Medicine>(
+                new InputStreamReader(this.getClass().getResourceAsStream("/MOCK_DATA.csv")))
+                .withType(Medicine.class).build().parse();
     }
 
     /**
      * Получить список медикаментов.
+     *
      * @return список медикаментов
      */
     @Get()
@@ -33,6 +36,7 @@ public class MedicineController {
 
     /**
      * Найти медикаменты по идентификатору.
+     *
      * @param id идентификатор медикаментов
      * @return Медикаменты, если есть, иначе 404 ошибка
      */
